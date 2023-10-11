@@ -1,48 +1,59 @@
 const mainTemporada1HTML = `
 
+<div class="centrado" id="centradoF">
+    <video autoplay muted>
+      <source class="fondo" src="./img/temporadas/banner.mp4" type="video/mp4">
+      <source class="banner" src="./img/temporadas/banner.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="centrado">
+    <label>Temporada 1<label>
+  </div>
+
     <div class="centrado">
       <button onclick="cambiarScript('capitulo1')">
-        <img src="./img/temporadas/temporada1/capitulo1.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo1.jpg">
         <label>Capitulo 1</label>
       </button>
       <button onclick="cambiarScript('capitulo2')">
-        <img src="./img/temporadas/temporada1/capitulo2.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo2.jpg">
         <label>Capitulo 2</label>
       </button>
       <button onclick="cambiarScript('capitulo3')">
-        <img src="./img/temporadas/temporada1/capitulo3.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo3.jpg">
         <label>Capitulo 3</label>
       </button>
       <button onclick="cambiarScript('capitulo4')">
-        <img src="./img/temporadas/temporada1/capitulo4.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo4.jpg">
         <label>Capitulo 4</label>
       </button>
       <button onclick="cambiarScript('capitulo5')">
-        <img src="./img/temporadas/temporada1/capitulo5.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo5.jpg">
         <label>Capitulo 5</label>
       </button>
       <button onclick="cambiarScript('capitul6')">
-        <img src="./img/temporadas/temporada1/capitulo6.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo6.jpg">
         <label>Capitulo 6</label>
       </button>
       <button onclick="cambiarScript('capitulo7')">
-        <img src="./img/temporadas/temporada1/capitulo7.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo7.jpg">
         <label>Capitulo 7</label>
       </button>
       <button onclick="cambiarScript('capitulo8')">
-        <img src="./img/temporadas/temporada1/capitulo8.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo8.jpg">
         <label>Capitulo 8</label>
       </button>
       <button onclick="cambiarScript('capitulo9')">
-        <img src="./img/temporadas/temporada1/capitulo9.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo9.jpg">
         <label>Capitulo 9</label>
       </button>
       <button onclick="cambiarScript('capitulo10')">
-        <img src="./img/temporadas/temporada1/capitulo10.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo10.jpg">
         <label>Capitulo 10</label>
       </button>
       <button onclick="cambiarScript('capitulo11')">
-        <img src="./img/temporadas/temporada1/capitulo11.jpg">
+        <img id="imgMasTamaño" src="./img/temporadas/temporada1/capitulo11.jpg">
         <label>Capitulo 11</label>
       </button>
     </div>

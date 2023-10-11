@@ -1,5 +1,12 @@
 const mainTemporada2HTML = `
 
+<div class="centrado" id="centradoF">
+    <video autoplay muted>
+      <source class="fondo" src="./img/temporadas/banner.mp4" type="video/mp4">
+      <source class="banner" src="./img/temporadas/banner.mp4" type="video/mp4">
+    </video>
+</div>
+
 <div class="centrado">
 <button onclick="cambiarScript('capitulo1')">
   <img src="./img/temporada2/capitulo1.jpg">

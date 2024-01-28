@@ -1,0 +1,75 @@
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS skinskill_bd;
+
+-- Usar la base de datos
+USE skinskill_bd;
+
+-- Tabla para usuarios
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_completo VARCHAR(255) NOT NULL,
+    correo VARCHAR(255) NOT NULL UNIQUE,
+    contrasena VARCHAR(255) NOT NULL,
+    direccion VARCHAR(255),
+    talla VARCHAR(10) NOT NULL,
+    edad INT,
+    genero VARCHAR(50),
+    idioma_preferido VARCHAR(50),
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_ultimo_acceso TIMESTAMP DEFAULT NULL,
+    ip_registro VARCHAR(45)
+);
+
+-- Tabla para productos
+CREATE TABLE productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    codigo_producto VARCHAR(50) NOT NULL UNIQUE,
+    nombre VARCHAR(255) NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    descripcion TEXT,
+    stock INT
+);
+
+-- Tabla para el carrito de compras
+CREATE TABLE carrito (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    producto_id INT,
+    cantidad INT,
+    talla VARCHAR(10) NOT NULL,
+    fecha_agregado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    FOREIGN KEY (producto_id) REFERENCES productos(id)
+);
+
+-- Tabla para los pedidos
+CREATE TABLE pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    fecha_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    estado VARCHAR(50),
+    total DECIMAL(10, 2),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
+-- Tabla para los detalles de los pedidos
+CREATE TABLE detalles_pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pedido_id INT,
+    producto_id INT,
+    cantidad INT,
+    talla VARCHAR(10) NOT NULL,
+    precio_unitario DECIMAL(10, 2),
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+    FOREIGN KEY (producto_id) REFERENCES productos(id)
+);
+
+-- Tabla para el historial de actividad
+CREATE TABLE historial_actividad (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    accion VARCHAR(255) NOT NULL,
+    objeto_afectado VARCHAR(255),
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);

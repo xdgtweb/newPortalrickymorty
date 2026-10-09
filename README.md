@@ -1,4 +1,8 @@
 # newPortalrickymorty
 https://xdgtweb.github.io/newPortalrickymorty/index.html
 
-0x58718abea7213f0795ea64d0c7b1823803ecff28
+cp /etc/hosts /etc/hosts.BKP
+
+echo -e "\n127.0.0.1 countrycode.local mirror.local\n" >> /etc/hosts
+
+exit
